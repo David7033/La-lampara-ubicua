@@ -5,10 +5,12 @@ import java.awt.event.*;
 
 public class VentanaCListener extends Frame implements ActionListener
 {
-    Button btn_click;
     Boolean isClicked;
 
     private static final long serialVersionUID = 1L;
+    
+    Button btn_click;
+    
     public VentanaCListener()
     {
         this.init();
