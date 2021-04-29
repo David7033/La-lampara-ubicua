@@ -2,8 +2,8 @@ package primerParcial.ejercicios;
 import java.awt.*;
 import java.awt.event.*;
 
-public class practica2 extends Frame implements MouseListener, MouseMotionListener, KeyListener{
-
+public class practica2 extends Frame implements MouseListener, MouseMotionListener, KeyListener
+{
 	private static final long serialVersionUID = 1L;
 
 	private Game obj_pintable;

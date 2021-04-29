@@ -1,5 +1,4 @@
 package primerParcial.ejercicios;
-
 import java.awt.*;
 
 public class Game extends Canvas 
