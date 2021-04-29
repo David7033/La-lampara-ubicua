@@ -1,4 +1,4 @@
-package ejercicios.ejercicio3;
+package primerParcial.ejercicios.ejercicio2;
 import java.awt.*;
 import java.awt.Button;
 import java.awt.event.*;
@@ -6,11 +6,10 @@ import java.awt.event.*;
 public class VentanaCListener extends Frame implements ActionListener
 {
     Boolean isClicked;
-    
+
     private static final long serialVersionUID = 1L;
     
     Button btn_click;
-    TextField txt_in;
     
     public VentanaCListener()
     {
