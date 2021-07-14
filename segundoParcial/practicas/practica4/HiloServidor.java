@@ -26,7 +26,7 @@ public class HiloServidor extends Thread
     public void run()
     {
         String cadena = "";
-        while(!cadena.trim().equals("")){
+        while(!cadena.trim().equals("Log out")){
             System.out.println("Hablando con: "+socket.toString());
             try
             {
