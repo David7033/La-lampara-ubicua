@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -28,6 +29,7 @@ public class ClienteNaval {
 		frame.getContentPane().add(textField, "North");
 		frame.getContentPane().add(new JScrollPane(mensaje), "Center");
 		frame.pack();
+		
 		
 		textField.addActionListener(new ActionListener() {
 			
@@ -76,7 +78,13 @@ public class ClienteNaval {
 
 	public static void main(String[] args) throws Exception {
 
-
+		try {
+			javax.swing.UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception ex) {
+			ex.printStackTrace();
+        }
+		new MatrizBoton().setVisible(true);
+		
 		ClienteNaval cliente = new ClienteNaval();
 		cliente.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		cliente.frame.setVisible(true);
