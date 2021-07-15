@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class Boton extends JButton implements ActionListener {
-	private static boolean defaultColor = true;
 	private Boolean []status;
     
     //-------- Constructor con parametros para posicionar a los botones ------//

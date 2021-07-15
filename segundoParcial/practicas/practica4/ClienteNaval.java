@@ -60,18 +60,26 @@ public class ClienteNaval {
 		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		out = new PrintWriter(socket.getOutputStream(),true);
 		
-		while (true) {
-			String line = in.readLine();
-			if(line.startsWith("SUBMITNAME")) {
-				out.println(getName());
-			}else if(line.startsWith("nombre aceptado")) {
-				textField.setEditable(true);
-			}else if(line.startsWith("Mensaje")) {
-				mensaje.append(line.substring(8)+"\n");
-			}else if(line.startsWith("Servidor Lleno")) {
-				mensaje.append(line);
+		try {
+			while (true) {
+				String line = in.readLine();
+				if(line.startsWith("SUBMITNAME")) {
+					out.println(getName());
+				}else if(line.startsWith("nombre aceptado")) {
+					textField.setEditable(true);
+				}else if(line.startsWith("Mensaje")) {
+					mensaje.append(line.substring(8)+"\n");
+				}else if(line.startsWith("Servidor Lleno")) {
+					mensaje.append(line);
+				}
 			}
+		} catch (Exception e) 
+		{
+		
+		}finally{
+			socket.close();
 		}
+		
 		
 	}
 	
